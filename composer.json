@@ -1,0 +1,45 @@
+{
+    "name": "openswag/laravel",
+    "description": "Laravel package for generating OpenAPI 3.0 documentation with interactive Scalar UI",
+    "type": "library",
+    "license": "MIT",
+    "keywords": ["laravel", "openapi", "swagger", "documentation", "scalar"],
+    "require": {
+        "php": "^8.1",
+        "illuminate/support": "^9.0|^10.0|^11.0|^12.0",
+        "psr/simple-cache": "^3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.0|^11.0",
+        "orchestra/testbench": "^7.0|^8.0|^9.0|^10.0",
+        "pestphp/pest": "^2.0|^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "OpenSwag\\Laravel\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "OpenSwag\\Laravel\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "OpenSwag\\Laravel\\OpenSwagServiceProvider"
+            ],
+            "aliases": {
+                "OpenSwag": "OpenSwag\\Laravel\\Facades\\OpenSwag"
+            }
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
